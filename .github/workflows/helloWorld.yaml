@@ -1,25 +1,10 @@
-# name: Hello World
-# on:
-#   push:
-#     branches:
-#       - develop
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Hello World
-#         run: echo "Hello, World!"
-
-
-
-name: Variable
-on:
-  workflow_dispatch:
-env:
-  MY_VARIABLE: ${{ secrets.MY_SECRET_VARIABLE }}
+name: Hello World
+on: [push]
 jobs:
-  print-variable:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Variable
-        run: echo "The value of MY_VARIABLE is:" $MY_VARIABLE
+      - name: Hello World
+        run: echo "Hello, World!"
+
+
